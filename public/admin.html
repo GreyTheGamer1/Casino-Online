@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casino Admin Panel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-bg">
+  <div id="admin-login" class="centered">
+    <h1 class="neon-glow">Admin Panel</h1>
+    <input id="admin-code" type="password" placeholder="Enter admin code">
+    <button id="admin-login-btn" class="neon-btn">Login</button>
+    <div id="admin-login-error" class="error"></div>
+  </div>
+  <div id="admin-ui" class="hidden">
+    <header>
+      <div class="stat neon-glow">Jackpot: <input id="admin-jackpot" type="number" min="0" class="neon-input"></div>
+      <div class="stat neon-glow">Players Online: <span id="players-online">0</span></div>
+    </header>
+    <main>
+      <div class="command-bar">
+        <input id="admin-command" type="text" placeholder="Enter command..." autocomplete="off" class="neon-input">
+        <div id="command-autocomplete" class="autocomplete"></div>
+        <button id="send-command" class="neon-btn">Send</button>
+      </div>
+      <div class="admin-panels">
+        <div class="player-list-panel">
+          <h2>Players</h2>
+          <ul id="admin-player-list"></ul>
+        </div>
+        <div class="command-log-panel">
+          <h2>Command Log</h2>
+          <ul id="admin-command-log"></ul>
+        </div>
+      </div>
+    </main>
+    <div id="admin-announcement-bar" class="announcement-bar"></div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="../scripts/socketClient.js"></script>
+  <script src="../scripts/admin.js"></script>
+</body>
+</html> 

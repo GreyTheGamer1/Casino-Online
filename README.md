@@ -1,3 +1,0 @@
-   git remote add origin https://github.com/GreyTheGamer1/Casino-Online
-   git branch -M main
-   git push -u origin main

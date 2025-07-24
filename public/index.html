@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic Casino Online</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="neon-bg">
+  <div id="login-screen" class="centered">
+    <h1 class="neon-glow">Casino Online</h1>
+    <input id="player-name" type="text" placeholder="Enter your name" maxlength="20">
+    <input id="player-code" type="text" placeholder="Enter your unique code" maxlength="12">
+    <button id="login-btn" class="neon-btn">Login</button>
+    <div id="login-error" class="error"></div>
+  </div>
+  <div id="game-ui" class="hidden">
+    <header>
+      <div class="stat neon-glow">Tokens: <span id="player-tokens">0</span></div>
+      <div class="stat neon-glow">Current Machine: <span id="current-machine">-</span></div>
+      <div class="stat neon-glow">Jackpot: <span id="global-jackpot">0</span></div>
+    </header>
+    <main>
+      <div id="slot-machines" class="machine-list"></div>
+      <div id="slot-area" class="slot-area">
+        <div class="reels">
+          <span class="reel" id="reel-1">🎰</span>
+          <span class="reel" id="reel-2">🎰</span>
+          <span class="reel" id="reel-3">🎰</span>
+        </div>
+        <button id="spin-btn" class="neon-btn">SPIN</button>
+        <div id="spin-result" class="result"></div>
+      </div>
+    </main>
+    <div id="announcement-bar" class="announcement-bar"></div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="../scripts/socketClient.js"></script>
+  <script src="../scripts/player.js"></script>
+</body>
+</html> 
